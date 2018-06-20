@@ -10,9 +10,12 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class StaticsticsVisitor : IDocumentVisitor
+    public class StaticsticsVisitor : DocumentVisitorBase
     {
         readonly StringBuilder buffer;
+        
+        public int WordCount { get; private set; }
+        protected StringBuilder Buffer { get { return buffer; } }
 
         public StaticsticsVisitor()
         {
@@ -20,12 +23,12 @@ namespace WindowsFormsApplication1
             this.buffer = new StringBuilder();
         }
 
-        public virtual void Visit(DocumentText text)
+        public override void Visit(DocumentText text)
         {
             Buffer.Append(text.Text);
         }
 
-        public virtual void Visit(DocumentParagraphEnd paragraphEnd)
+        public override void Visit(DocumentParagraphEnd paragraphEnd)
         {
             FinishParagraph();
         }
@@ -36,28 +39,6 @@ namespace WindowsFormsApplication1
             this.WordCount += text.Split(new char[] { ' ', '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries).Length;
             Buffer.Length = 0;
         }
-
-        public virtual void Visit(DocumentTableCellBorder cellBorder) { }
-        public virtual void Visit(DocumentSectionStart sectionStart) { }
-        public virtual void Visit(DocumentFieldCodeStart fieldCodeStart) { }
-        public virtual void Visit(DocumentFieldCodeEnd fieldCodeEnd) { }
-        public virtual void Visit(DocumentFieldResultEnd fieldResultEnd) { }
-        public virtual void Visit(DocumentBookmarkStart bookmarkStart) { }
-        public virtual void Visit(DocumentBookmarkEnd bookmarkEnd) { }
-        public virtual void Visit(DocumentCommentStart commentStart) { }
-        public virtual void Visit(DocumentSectionEnd sectionEnd) { }
-        public virtual void Visit(DocumentCommentEnd commentEnd) { }
-        public virtual void Visit(DocumentRangePermissionStart rangePermissionStart) { }
-        public virtual void Visit(DocumentRangePermissionEnd rangePermissionEnd) { }
-        public virtual void Visit(DocumentTextBox textBox) { }
-        public virtual void Visit(DocumentParagraphStart paragraphStart) { }
-        public virtual void Visit(DocumentInlinePicture inlinePicture) { }
-        public virtual void Visit(DocumentPicture picture) { }
-        public virtual void Visit(DocumentHyperlinkStart hyperlinkStart) { }
-        public virtual void Visit(DocumentHyperlinkEnd hyperlinkEnd) { }
-
-        public int WordCount { get; private set; }
-        protected StringBuilder Buffer { get { return buffer; } }
     }
 
     public class CustomLayoutVisitor : LayoutVisitor
