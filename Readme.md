@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [CustomLayoutVisitor.cs](./CS/WindowsFormsApplication1/CustomLayoutVisitor.cs) (VB: [CustomLayoutVisitor.vb](./VB/WindowsFormsApplication1/CustomLayoutVisitor.vb))
+* [Form1.cs](./CS/WindowsFormsApplication1/Form1.cs) (VB: [Form1.vb](./VB/WindowsFormsApplication1/Form1.vb))
+<!-- default file list end -->
 # How to emulate the MS Word information status bar when using RichEditControl
 
 
