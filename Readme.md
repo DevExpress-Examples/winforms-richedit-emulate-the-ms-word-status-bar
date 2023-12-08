@@ -8,7 +8,7 @@
 
 This example demonstrates how to implement an information status bar that mimics the MS Word status bar:
 
-[!image](./media/150534eb-cd19-11e6-80bf-00155d62480c.png)
+![image](./media/150534eb-cd19-11e6-80bf-00155d62480c.png)
 
 ## Implementation Details
 
