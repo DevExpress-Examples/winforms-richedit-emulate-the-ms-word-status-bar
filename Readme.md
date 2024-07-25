@@ -23,7 +23,7 @@ In this example, we use different approaches to collect required information:
 
 ## More Examples
  
-- [Rich Text Editor for WinForms - Layout API]([https://www.devexpress.com/Support/Center/p/T245818](https://github.com/DevExpress-Examples/winforms-richedit-layout-api))  
+- [Rich Text Editor for WinForms - Layout API](https://github.com/DevExpress-Examples/winforms-richedit-layout-api)  
 - [Rich Text Editor for WinForms: Document Layout API - Practical Usage](https://github.com/DevExpress-Examples/winforms-richedit-layout-api-practical-usage)
 
 <!-- feedback -->
