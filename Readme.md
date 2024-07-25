@@ -4,22 +4,28 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# How to emulate the MS Word information status bar when using RichEditControl
+
+This example demonstrates how to implement an information status bar that mimics the MS Word status bar:  
+![MS Word status bar](media/150534eb-cd19-11e6-80bf-00155d62480c.png)
+
+This task is accomplished by using the RichEditControl's DocumentLayout API. Review the following help topic for additional information: [Layout API](https://docs.devexpress.com/WindowsForms/114069/controls-and-libraries/rich-text-editor/page-layout/layout-api)
+
+In this example, we use different approaches to collect required information:
+
+* The [DocumentIterator](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.DocumentIterator) class to obtain the total word count.
+* A custom [LayoutVisitor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Layout.LayoutVisitor) descendant to get the caret position (the line and column indices).
+
+## Files to Review
 
 * [CustomLayoutVisitor.cs](./CS/WindowsFormsApplication1/CustomLayoutVisitor.cs) (VB: [CustomLayoutVisitor.vb](./VB/WindowsFormsApplication1/CustomLayoutVisitor.vb))
 * [Form1.cs](./CS/WindowsFormsApplication1/Form1.cs) (VB: [Form1.vb](./VB/WindowsFormsApplication1/Form1.vb))
-<!-- default file list end -->
-# How to emulate the MS Word information status bar when using RichEditControl
 
+## More Examples
+ 
+- [Rich Text Editor for WinForms - Layout API]([https://www.devexpress.com/Support/Center/p/T245818](https://github.com/DevExpress-Examples/winforms-richedit-layout-api))  
+- [Rich Text Editor for WinForms: Document Layout API - Practical Usage](https://github.com/DevExpress-Examples/winforms-richedit-layout-api-practical-usage)
 
-<p>This example demonstrates how to implement an information status bar that mimics the MS Word status bar:<br><img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-emulate-the-ms-word-information-status-bar-when-using-richeditcontrol-t467150/16.1.9+/media/150534eb-cd19-11e6-80bf-00155d62480c.png"></p>
-<p>This task is accomplished by using the RichEditControl's DocumentLayout API. Review the following help topic for additional information:<br><a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument114069">Layout API</a></p>
-<p>In this example, we use different approaches to collect required information:</p>
-
-* The <a href="https://documentation.devexpress.com/CoreLibraries/clsDevExpressXtraRichEditAPINativeDocumentIteratortopic.aspx">DocumentIterator</a> class to obtain the total word count.
-* A custom <a href="https://documentation.devexpress.com/#CoreLibraries/clsDevExpressXtraRichEditAPILayoutLayoutVisitortopic">LayoutVisitor</a> descendant to get the caret position (the line and column indices).
-<p><strong>See also:</strong><br><a href="https://www.devexpress.com/Support/Center/p/T245818">Layout API - Simple Example</a><br><a href="https://www.devexpress.com/Support/Center/p/T266080">Document Layout API - Practical usage</a></p>
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
